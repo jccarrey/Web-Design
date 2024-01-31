@@ -1,0 +1,1314 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,700;1,800&display=swap');
+
+html,
+body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #000000;
+    --secondary-color: white;
+    --terciary-color: #999999;
+}
+
+body {
+    /* reset de los user agent styles para margin y padding*/
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, "sans-serif";
+}
+
+.container {
+    overflow-x: hidden;
+    min-height: 100vh;
+    background-color: white;
+}
+
+
+
+/* ------------------------------ CABECERA ------------------------------------ */
+
+
+
+header {
+    display: flex;
+    width: 100%;
+    /* background-color: coral; */
+    z-index: 1999;
+    position: absolute;
+    justify-content: space-between;
+    overflow-x: hidden;
+
+}
+
+
+/* ------------------ LOGO ------------------ */
+
+
+.logo {
+    display: flex;
+    flex-flow: row nowrap;
+
+    width: 30vw;
+    /* background-color: #F0B460; */
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    cursor: pointer;
+}
+
+.logo img {
+    margin-top: 3vh;
+    margin-right: 15vw;
+    width: 10em;
+}
+
+/* -------------MENU------------- */
+
+
+
+.main-nav {
+    display: flex;
+    flex-flow: row nowrap;
+
+    font-weight: 300;
+
+    margin-top: 5vh;
+
+    /* background-color: coral; */
+}
+
+.list-nav {
+    display: flex;
+}
+
+.list-nav li:not(:last-child) {
+    margin-right: 8vw;
+}
+
+.list-nav li {
+    text-transform: uppercase;
+    font-size: clamp(0.7rem, 0.579rem + 0.404vw, 1.064rem);
+    font-weight: 500;
+    list-style: none;
+    font-family: Montserrat, "sans serif";
+    margin-right: 4vw;
+}
+
+.list-nav-item1 a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+
+
+.link {
+    text-decoration: none;
+    color: inherit;
+    color: var(--main-color);
+}
+
+.main-nav li a:hover {
+    color: white;
+}
+
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+
+
+
+/* ------------------------------------ HERO ------------------------------------ */
+
+
+
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url(./images/posiblehero.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.texto-hero-1 {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    /* Puedes ajustar esto según sea necesario */
+    left: 76%;
+    /* Puedes ajustar esto según sea necesario */
+    transform: translate(-50%, -50%);
+    /* Frases estarán por encima de las imágenes de fondo */
+
+    color: var(--main-color);
+    font-size: clamp(2rem, 0.424rem + 5.2vw, 3.3rem);
+    font-weight: 200;
+}
+
+.texto-hero-2 {
+    position: absolute;
+    top: 48%;
+    width: 100%;
+    /* Puedes ajustar esto según sea necesario */
+    left: 82%;
+    /* Puedes ajustar esto según sea necesario */
+    transform: translate(-50%, -50%);
+
+    color: var(--main-color);
+    font-size: clamp(2rem, 0.424rem + 5.2vw, 3.3rem);
+    font-weight: 200;
+}
+
+
+
+/* ------------------------------ HOME ------------------------------------ */
+
+.home {
+    position: relative;
+    width: 100vw;
+    height: 120vh;
+
+    /* margin-top: 7vh; */
+
+    /* background-color: rgb(129, 191, 245); */
+}
+
+.rectanguloHome {
+    position: relative;
+
+    background-image: url(./images/home.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    top: 15vh;
+
+    height: 53.5vh;
+    width: 100vw;
+
+    transition: color 0.8s ease;
+    /* background-color: antiquewhite; */
+}
+
+.rectanguloHome h3 {
+    position: absolute;
+    top: 42%;
+    width: 100%;
+    /* Puedes ajustar esto según sea necesario */
+    left: 76%;
+    /* Puedes ajustar esto según sea necesario */
+    transform: translate(-50%, -50%);
+
+    color: var(--main-color);
+    font-size: clamp(1.4rem, 0.672rem + 2.4vw, 2rem);
+    font-weight: 300;
+    opacity: 0;
+    transition: opacity 2s ease;
+    /* Ajusta la duración de la transición según sea necesario */
+}
+
+.cosa-rara {
+    background-image: url(./images/zocat.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* background-color: coral; */
+    height: 27vh;
+    width: 100vw;
+
+    margin-top: 35vh;
+}
+
+
+
+/* ------------------------------ ABOUT ------------------------------------ */
+
+
+
+/* ----------------------- SECTION-1-ABOUT ----------------------- */
+
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: fit-content;
+
+    margin-top: 10vh;
+}
+
+.section-1-about {
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: fit-content;
+}
+
+.foto-about {
+    /* background-color: coral; */
+    margin-right: 7vw;
+    margin-left: 2vw;
+    margin-top: 10vh;
+}
+
+.texto-about {
+    display: flex;
+    flex-flow: row wrap;
+
+    width: 30%;
+    height: fit-content;
+    /* background-color: aquamarine; */
+
+    margin-bottom: 8vh;
+    margin-right: 5vw
+        /* background-color: aqua; */
+}
+
+.titulo-about h4 {
+    font-size: clamp(1.7rem, 1.433rem + 0.889vw, 2.5rem);
+    font-weight: 500;
+    text-align: center;
+    border-top: 2px solid #000000;
+}
+
+
+.texto-about p {
+    font-size: clamp(0.9rem, 0.85rem + 0.167vw, 1.05rem);
+    font-weight: 300;
+    line-height: 2.5em;
+    width: 100%;
+
+    /* background-color: rgb(141, 115, 115); */
+}
+
+
+
+/* ----------------------- SECTION-2-ABOUT ----------------------- */
+
+
+.section-2-about {
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: fit-content;
+}
+
+.foto-about-2 {
+    /* background-color: coral; */
+    margin-right: 0vw;
+    margin-top: 10vh;
+}
+
+.texto-about-2 {
+    display: flex;
+    flex-flow: row wrap;
+
+    width: 35%;
+    height: fit-content;
+    /* background-color: aquamarine; */
+
+    margin-bottom: 8vh;
+    margin-left: 0vw;
+    margin-right: 5vw;
+    /* background-color: aqua; */
+}
+
+
+.texto-about-2 p {
+    font-size: clamp(0.9rem, 0.85rem + 0.167vw, 1.05rem);
+    font-weight: 300;
+    line-height: 2.5em;
+    width: 100%;
+
+    /* background-color: rgb(141, 115, 115); */
+}
+
+
+
+/* ------------------------------ SERVICES ------------------------------------ */
+
+
+
+/* ------------------ SERVICES 1 -------------------- */
+
+
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: fit-content;
+
+    margin-top: 8vh;
+    /* background-color: blue; */
+
+}
+
+.titulo-services {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    /* background-color: blue; */
+
+    width: 100vw;
+    height: fit-content;
+
+    margin-left: 7.75vw;
+}
+
+.titulo-services h4 {
+    font-size: clamp(1.7rem, 1.433rem + 0.889vw, 2.5rem);
+    font-weight: 500;
+    text-align: center;
+    border-top: 2px solid #000000;
+}
+
+.section-1-services {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: fit-content;
+
+    /* background-color: coral; */
+}
+
+.titulo-services-1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: fit-content;
+
+    margin-left: 15vw;
+}
+
+.titulo-services-1 h5 {
+    font-size: clamp(1.4rem, 1.433rem + 0.889vw, 1.8rem);
+    font-weight: 200;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+}
+
+.section-content-1 {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: fit-content;
+
+    margin-top: 7vh;
+    /* background-color: coral; */
+}
+
+#img1service {
+    position: relative;
+    margin-right: 25vw;
+}
+
+#img2service {
+    position: absolute;
+
+    top: 60%;
+    left: 75%;
+
+}
+
+.imagenes-service img {
+    filter: grayscale(100%);
+    /* Inicia las imágenes en escala de grises */
+    transition: filter 0.5s ease;
+}
+
+.imagenes-service img:hover {
+    filter: grayscale(0%);
+}
+
+.texto-section-1-services {
+    position: absolute;
+
+    width: 100vw;
+
+    bottom: 50%;
+    left: 103%;
+
+    font-size: .9rem;
+}
+
+
+
+/* ------------------ SERVICES 2 -------------------- */
+
+
+
+.section-2-services {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: fit-content;
+
+    margin-top: 35vh;
+    /* background-color: rgb(219, 174, 157); */
+}
+
+.titulo-services-2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: fit-content;
+
+    margin-right: 12vw;
+}
+
+.titulo-services-2 h5 {
+    font-size: clamp(1.4rem, 1.433rem + 0.889vw, 1.8rem);
+    font-weight: 200;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+}
+
+.section-content-2 {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: fit-content;
+
+    margin-top: 7vh;
+    /* background-color: coral; */
+
+}
+
+#img3service {
+    position: relative;
+    margin-right: -26vw;
+}
+
+#img4service {
+    position: absolute;
+
+    top: 60%;
+    right: 75.75%;
+
+}
+
+.imagenes-service img {
+    filter: grayscale(100%);
+    /* Inicia las imágenes en escala de grises */
+    transition: filter 0.5s ease;
+}
+
+.imagenes-service img:hover {
+    filter: grayscale(0%);
+}
+
+.texto-section-2-services {
+    position: absolute;
+
+    width: 100vw;
+
+    bottom: 45%;
+    left: -70%;
+
+    font-size: .9rem;
+}
+
+
+
+/* ------------------ SERVICES 3 -------------------- */
+
+
+
+.section-3-services {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: fit-content;
+
+    margin-top: 40vh;
+    /* background-color: coral; */
+}
+
+.titulo-services-3 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: fit-content;
+
+    margin-left: 15vw;
+}
+
+.titulo-services-3 h5 {
+    font-size: clamp(1.4rem, 1.433rem + 0.889vw, 1.8rem);
+    font-weight: 200;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+}
+
+.section-content-3 {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: fit-content;
+
+    margin-top: 10vh;
+    /* background-color: coral; */
+}
+
+#img5service {
+    position: relative;
+    margin-right: 25vw;
+}
+
+#img6service {
+    position: absolute;
+
+    top: 60%;
+    left: 75%;
+}
+
+.imagenes-service img {
+    filter: grayscale(100%);
+    /* Inicia las imágenes en escala de grises */
+    transition: filter 0.5s ease;
+}
+
+.imagenes-service img:hover {
+    filter: grayscale(0%);
+}
+
+.texto-section-3-services {
+    position: absolute;
+
+    width: 100vw;
+
+    bottom: 50%;
+    left: 103%;
+
+    font-size: .9rem;
+}
+
+
+/* ------------------------------ PROJECTS ------------------------------------ */
+
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: fit-content;
+
+    margin-top: 45vh;
+}
+
+.titulo-projects {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    /* background-color: blue; */
+
+    width: 100vw;
+    height: fit-content;
+
+    margin-left: 7.75vw;
+}
+
+.titulo-projects h4 {
+    font-size: clamp(1.7rem, 1.433rem + 0.889vw, 2.5rem);
+    font-weight: 500;
+    text-align: center;
+    border-top: 2px solid #000000;
+}
+
+.galeria {
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+
+    height: fit-content;
+
+    margin-top: 5vh;
+    margin-left: 0.2em;
+    width: 89vw;
+
+
+    /* background-color: rgb(128, 128, 184); */
+}
+
+
+.fotos-galeria {
+    position: relative;
+    margin-bottom: 8vh;
+    filter: grayscale(100%);
+    /* Inicia las imágenes en escala de grises */
+    transition: filter 0.5s ease;
+    cursor: crosshair;
+    /* background-color: #F0B460; */
+}
+
+.fotos-galeria:hover {
+    filter: grayscale(0%);
+    /* Aplica el color original en hover */
+}
+
+
+
+
+/* ------------------------------ CONTACT ------------------------------------ */
+
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: fit-content;
+
+    margin-top: 0vh;
+
+    /* color: var(--main-color); */
+}
+
+.titulo-contact {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    /* background-color: blue; */
+
+    width: 100vw;
+    height: fit-content;
+
+    margin-left: 7.75vw;
+}
+
+.titulo-contact h4 {
+    font-size: clamp(1.7rem, 1.433rem + 0.889vw, 2.5rem);
+    font-weight: 500;
+    text-align: center;
+    border-top: 2px solid #000000;
+}
+
+.rectangulo-contact {
+    position: relative;
+
+    background-image: url(./images/rectangulo-contact.jpg);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 100vw;
+    height: 53vh;
+
+    /* background-color: #999999; */
+}
+
+#primer-h3 {
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    /* Puedes ajustar esto según sea necesario */
+    left: 82%;
+    /* Puedes ajustar esto según sea necesario */
+    transform: translate(-50%, -50%);
+
+    color: var(--main-color);
+    font-size: clamp(2rem, 0.714rem + 2.095vw, 2.6rem);
+    font-weight: 400;
+
+    opacity: 0;
+    transition: opacity 2.4s ease;
+}
+
+#segundo-h3 {
+    position: absolute;
+    top: 28%;
+    width: 100%;
+    /* Puedes ajustar esto según sea necesario */
+    left: 99%;
+    /* Puedes ajustar esto según sea necesario */
+    transform: translate(-50%, -50%);
+
+    color: var(--main-color);
+    font-size: clamp(2rem, 0.714rem + 2.095vw, 2.6rem);
+    font-weight: 400;
+
+    opacity: 0;
+    transition: opacity 2.4s ease;
+}
+
+
+form {
+    width: 70vw;
+    margin-top: 10vh;
+}
+
+label {
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 5vh;
+    border: none;
+    border-bottom: 1px solid var(--main-color);
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+}
+
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 5vh;
+    border: none;
+    border-bottom: 1px solid var(--main-color);
+    resize: vertical;
+}
+
+::placeholder {
+    color: var(--main-color);
+}
+
+input[type="submit"] {
+    background-color: var(--terciary-color);
+    color: var(--main-color);
+    cursor: pointer;
+    border-bottom: none;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+}
+
+.geolocalizacion {
+    /* background-color: coral; */
+    width: 100vw;
+    height: auto;
+}
+
+.geolocalizacion iframe {
+    width: 100vw;
+    margin-top: 4vh;
+}
+
+/* ------------------------------ FOOTER ------------------------------------ */
+
+footer {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+    height: fit-content;
+    color: white;
+    background-color: #1a1c1b;
+}
+
+.contenedor-footer-top {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+
+    width: 100vw;
+    height: fit-content;
+    /* background-color: #F0B460; */
+
+    margin-top: 6vh;
+}
+
+.logo-footer {
+    display: flex;
+    flex-flow: row nowrap;
+
+    width: 20%;
+    /* background-color: green; */
+
+    justify-content: right;
+    align-items: center;
+    align-content: center;
+}
+
+.pages h3 {
+    font-size: 1rem;
+    margin-bottom: 3vh;
+}
+
+.pages p {
+    font-size: .8rem;
+    margin-bottom: 2.2vh;
+}
+
+.policies h3 {
+    font-size: 1rem;
+    margin-bottom: 3vh;
+}
+
+.policies p {
+    font-size: .8rem;
+    margin-bottom: 2.2vh;
+}
+
+.social-media {
+    margin-right: 10vw;
+}
+
+.social-media h3 {
+    font-size: 1rem;
+    margin-bottom: 3vh;
+}
+
+.social-media p {
+    font-size: .8rem;
+    margin-bottom: 2.2vh;
+}
+
+.imagen-social-media {
+    width: 1.4vw;
+    margin-right: .5vw;
+    background-color: aliceblue;
+}
+
+.links {
+    text-decoration: none;
+    color: white;
+}
+
+.contenedor-footer-bottom {
+    width: 70vw;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    border-top: 1px solid var(--terciary-color);
+    margin-top: 2vh;
+}
+
+.contenedor-footer-bottom p {
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+    font-size: .8rem;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 2rem;
+        cursor: pointer;
+        background-color: transparent;
+        color: white;
+        margin-right: 2em;
+
+    }
+
+    .main-nav {
+        opacity: 0;
+        visibility: hidden;
+
+    }
+
+    header {
+        overflow: unset;
+    }
+
+    .main-nav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0em;
+        right: 0em;
+        margin: 0%;
+        bottom: 0;
+        gap: 1rem;
+        position: fixed;
+        background-color: var(--terciary-color);
+        /* padding: 2rem; */
+        width: 30%;
+        height: 100vh;
+        align-items: end;
+        justify-content: flex-start;
+        box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .5);
+    }
+
+    .main-nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .list-nav {
+        display: flex;
+        flex-direction: column;
+        margin: 0%;
+    }
+
+    .list-nav li {
+        margin-top: 7vh;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1480px) {
+    .texto-hero-1 {
+        left: 60%;
+
+        font-size: clamp(1.7rem, 0.424rem + 5.2vw, 2.4em);
+    }
+
+    .texto-hero-2 {
+        left: 66%;
+
+        font-size: clamp(1.7rem, 0.424rem + 5.2vw, 2.4em);
+    }
+
+    #primer-h3 {
+        top: 30%;
+    }
+
+    #segundo-h3 {
+        top: 40%;
+    }
+}
+
+@media only screen and (max-width: 1020px) {
+    .texto-hero-1 {
+        left: 60%;
+
+        font-size: clamp(1.7rem, 0.424rem + 5.2vw, 2em);
+    }
+
+    .texto-hero-2 {
+        left: 66%;
+        font-size: clamp(1.7rem, 0.424rem + 5.2vw, 2em);
+    }
+
+    .rectanguloHome {
+        background-size: cover;
+        height: 35vh;
+    }
+
+    .rectangulo-contact {
+        background-size: cover;
+    }
+
+    #img1service {
+        filter: contrast(.8);
+        margin-right: 0vw;
+    }
+
+    .texto-section-1-services {
+        bottom: 50%;
+        left: 22%;
+        font-weight: 700;
+        color: white;
+    }
+
+    #img2service {
+        position: absolute;
+
+        top: 80%;
+        left: 0%;
+    }
+
+    #img3service {
+        filter: contrast(.8);
+        margin-right: 0vw;
+    }
+
+    .texto-section-2-services {
+        bottom: 45%;
+        left: 20%;
+        font-weight: 700;
+        color: white;
+    }
+
+    #img4service {
+        position: absolute;
+
+        top: 80%;
+        left: 0%;
+    }
+
+    #img5service {
+        filter: contrast(.8);
+        margin-right: 0vw;
+    }
+
+    .texto-section-3-services {
+        bottom: 50%;
+        left: 35%;
+        font-weight: 700;
+        /* color: white; */
+    }
+
+    #img6service {
+        position: absolute;
+
+        top: 80%;
+        left: 0%;
+    }
+
+    .titulo-services-2 {
+        justify-content: center;
+        margin-left: 10vw;
+        margin-top: 10vh;
+    }
+
+    .titulo-services-3 {
+        margin-left: 7vw;
+        margin-top: 6vh;
+    }
+}
+
+@media only screen and (max-width: 740px) {
+    .texto-hero-1 {
+        left: 60%;
+
+        font-size: clamp(1.4rem, 0.424rem + 5.2vw, 1.7em);
+    }
+
+    .texto-hero-2 {
+        left: 66%;
+
+        font-size: clamp(1.4rem, 0.424rem + 5.2vw, 1.7em);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    /* -------------- HERO ----------------- */
+
+    .texto-hero-1 {
+        left: 54%;
+        top: 36%;
+        font-size: 1.15rem;
+    }
+
+    .texto-hero-2 {
+        left: 56%;
+        top: 41%;
+        font-size: 1.15rem;
+    }
+
+
+    /* -------------- HEADER ----------------- */
+
+    .logo {
+        margin-left: 15vw;
+    }
+
+    /* -------------- HOME ----------------- */
+
+    .rectanguloHome {
+        top: 10vh;
+    }
+
+    .cosa-rara {
+        background-image: url(./images/Recurso\ 3.png);
+        margin-top: 17vh;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .rectanguloHome h3 {
+        left: 52.3%;
+        top: 46.5%;
+        font-size: 1rem;
+    }
+
+    /* ------------- ABOUT -------------- */
+
+    .about {
+        margin-top: 30vh;
+    }
+
+    .texto-about {
+        width: 90%;
+        margin-left: 5vw;
+    }
+
+    .texto-about-2 {
+        width: 90%;
+        margin-left: 4vw;
+        margin-top: -15vh;
+    }
+
+    /* -------------- PROJECTS ----------- */
+
+    .projects {
+        margin-top: 50vh;
+    }
+
+    .galeria {
+        margin-top: 2vh;
+    }
+
+    /* -------------- CONTACT ------------ */
+
+    #primer-h3 {
+        top: 20%;
+        left: 67%;
+    }
+
+    #segundo-h3 {
+        top: 33%;
+    }
+
+    .contact {
+        margin-top: 0vh;
+    }
+
+    /* ---------------------- FOOTER ------------------------- */
+
+    .contenedor-footer-top {
+        flex-wrap: wrap;
+    }
+
+    .logo-footer {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .pages {
+        width: 100%;
+        text-align: center;
+    }
+
+    .policies {
+        width: 100%;
+        text-align: center;
+    }
+
+    .social-media {
+        width: 100%;
+        text-align: center;
+        margin-right: 0em;
+    }
+
+    .pages h3 {
+        font-size: 1.3rem;
+    }
+
+    .policies h3 {
+        font-size: 1.3rem;
+    }
+
+    .social-media h3 {
+        font-size: 1.3rem;
+    }
+
+    .pages p {
+        font-size: 1rem;
+    }
+
+    .policies p {
+        font-size: 1rem;
+    }
+
+    .social-media p {
+        font-size: 1rem;
+    }
+
+    .social-media img {
+        width: 20px;
+    }
+
+    .contenedor-footer-bottom {
+        width: 80vw;
+    }
+
+}

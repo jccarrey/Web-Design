@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./styles/styleIndex.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- CABECERA -->
+
+        <header role="banner">
+            <div class="logo">
+                <div class="circle">
+                </div>
+                <p>JAPAN TOURISM</p>
+            </div>
+
+            <button class = "abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
+
+            <nav role="navigation" class="main-nav" id="nav">
+
+                <button class = "cerrar-menu" id="cerrar"><i class="bi bi-x-lg"></i></button>
+                <ul class="list-nav">
+                    <li class="list-nav-item1" id="hoverHome"><a href="#" class="link">HOME</a></li>
+                    <li class="list-nav-item"><a href="routes.html" class="link">ROUTES</a></li>
+                    <li class="list-nav-item"><a href="howtocome.html" class="link">HOW TO COME</a></li>
+                    <li class="list-nav-item"><a href="contact.html" class="link">CONTACT</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <div class="hero">
+
+            <div class="textoDetras">
+                <p>Do everything you can</p>
+            </div>
+
+            <div class="fuji">
+
+            </div>
+
+            <div class="textoDelante">
+                <p>leave the rest to fate</p>
+            </div>
+
+        </div>
+
+
+        <!------------------------------- SECTION 1 -------------------------------------->
+
+
+        <!--------------------- ORIGEN ----------------------->
+
+        <div class="section-1">
+            <div class="rectangulo-1-index">
+                <p>A BIT OF OUR HISTORY</p>
+            </div>
+            <div class="origen">
+
+
+                <div class="foto-origen">
+                    <img src="./styles/images/home/origen.jpg" alt="Origen">
+                </div>
+
+                <div class="texto-origen">
+                    <div class="titulo-origen">
+                        <h4>The origin of Japan</h4>
+                    </div>
+
+                    <h5>日本の起源</h5>
+                    <p>The history of Japan is the succession of events that occurred within the Japanese archipelago.
+                        Some of these events appear isolated and influenced by the geographical nature of Japan as
+                        anisland nation, while another series of events are due to foreign influences, as in the case
+                        of
+                        the Chinese Empire, which defined its language, its writing and, also, its political culture.
+                    </p>
+                    <br>
+                    <p>Likewise,
+                        another of the foreign influences was that of Western origin,which turned the country into an
+                        industrial nation, thereby exercising a sphere of influence and territorial expansion over the
+                        Pacific
+                        area. Throughout its long history, Japan has experienced periods of isolation and openness to
+                        world.</p>
+
+                </div>
+            </div>
+
+
+
+            <!--------------------- CONTEMPORANEO ----------------------->
+
+
+            <div class="contemporaneo">
+                <div class="texto-contemporaneo">
+                    <div class="titulo-contemporaneo">
+                        <h4>Contemporary Japan</h4>
+                    </div>
+                    <h5>現代日本</h5>
+                    <p>In contemporary Japan, the unique fusion of tradition and modernity it is evident in all
+                        aspects of daily life. The bustling cities, like Tokyo and Osaka, are centers of technological
+                        innovation and design avant-garde urban, while ancient temples and gardens historic
+                        buildings remain as tangible reminders of the rich heritage Culture of the country.
+                    </p>
+                    <br>
+                    <p>Japanese society, highly organized and disciplined, adapts to the demands of a globalized
+                        economy, highlighting the efficiency and dedication to work. At the same time, the pop
+                        culture phenomenon, from anime and manga to J-pop music, has transcended borders,
+                        becoming a global influence.</p>
+                </div>
+
+                <div class="foto-contemporaneo">
+                    <img src="./styles/images/home/contemporaneo.jpg" alt="Contemporaneo">
+                </div>
+            </div>
+
+        </div>
+
+
+        <!------------------------------- SECTION 2 -------------------------------------->
+
+        <div class="section-2">
+            <div class="rectangulo-2-index">
+                <p>MAIN HISTORICAL MILESTONES</p>
+            </div>
+
+            <div class="timeline">
+                <div class="circulos" id="circulo1" onclick="showContent1()">
+                    <h6>14000 b.C</h6>
+                </div>
+                <div class="circulos" id="circulo2" onclick="showContent2()">
+                    <h6>300 b.C</h6>
+                </div>
+                <div class="circulos" id="circulo3" onclick="showContent3()">
+                    <h6>301 a.C</h6>
+                </div>
+                <div class="circulos" id="circulo4" onclick="showContent4()">
+                    <h6>638 a.C</h6>
+                </div>
+                <div class="circulos" id="circulo5" onclick="showContent5()">
+                    <h6>710 a.C</h6>
+                </div>
+                <div class="circulos" id="circulo6" onclick="showContent6()">
+                    <h6>794 a.C</h6>
+                </div>
+                <div class="circulos" id="circulo7" onclick="showContent7()">
+                    <h6>1186 a.C</h6>
+                </div>
+                <div class="circulos" id="circulo8" onclick="showContent8()">
+                    <h6>1333 a.C</h6>
+                </div>
+                <div class="circulos" id="circulo9" onclick="showContent9()">
+                    <h6>1336 a.C</h6>
+                </div>
+                <div class="circulos" id="circulo10" onclick="showContent10()">
+                    <h6>1673 a.C</h6>
+                </div>
+                <div class="circulos" id="circulo11" onclick="showContent11()">
+                    <h6>1868 a.C</h6>
+                </div>
+                <div class="circulos" id="circulo12" onclick="showContent12()">
+                    <h6>1989 a.C</h6>
+                </div>
+            </div>
+
+            <div class="info-timeline" id="content1">
+                <div class="foto-timeline">
+                    <img src="./styles/images/home/periodo-jomon.jpg" alt="
+                    Jomon period">
+                </div>
+
+                <div class="texto-timeline">
+
+                    <div class="titulo-timeline">
+                        <h4>
+                            Jomon period (14.300 b.C - 300 a.C).-</h4>
+                    </div>
+                    <p>The Jomon Period is a prehistoric period in the history of Japan that dates back to
+                        It extends from approximately 14,000 B.C. until around 300 BC.
+                        This period is known for the Jomon culture, which is the archaeological culture.
+                    </p>
+                    <br>
+                    <p>Oldest identified in the Japanese archipelago. Some features
+                        key to the Jomon Period are: Jomon pottery, hunting, fishing and gathering,
+                        society and housing, funerary rituals, stone tools,
+                        community development and agriculture.</p>
+                </div>
+            </div>
+
+            <div class="info-timeline2" id="content2">
+                <div class="foto-timeline">
+                    <img src="./styles/images/home/periodo-yayoi.jpg" alt="Periodo Jomon">
+                </div>
+
+                <div class="texto-timeline">
+
+                    <div class="titulo-timeline">
+                        <h4>Yayoi Period (300 a.C. - 300 d.C.).-</h4>
+                    </div>
+                    <p>
+                        The Yayoi Period in Japanese history extends from approximately 300 BC. until 300 AD This period
+                        is crucial because it marks a major change in culture and technology in Japan.
+                    </p>
+                </div>
+            </div>
+
+            <div class="info-timeline2" id="content3">
+                <div class="foto-timeline">
+                    <img src="./styles/images/home/periodo-kofun.jpg" alt="Periodo Jomon">
+                </div>
+
+                <div class="texto-timeline">
+
+                    <div class="titulo-timeline">
+                        <h4>Kofun Period (300 - 638).-</h4>
+                    </div>
+                    <p>The Kofun Period in the history of Japan, which lasted from around 300 to 638 CE, is named after
+                        the distinctive keyhole-shaped burial mounds called "kofun." This era is characterized by the
+                        establishment of powerful clans, the emergence of a centralized political authority, and the
+                        construction of large burial mounds for elite individuals.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="info-timeline2" id="content4">
+                <div class="foto-timeline">
+                    <img src="./styles/images/home/periodo-asuka.jpeg" alt="Periodo Jomon">
+                </div>
+
+                <div class="texto-timeline">
+
+                    <div class="titulo-timeline">
+                        <h4>Asuka Period (638 - 710).-</h4>
+                    </div>
+                    <p>The Asuka period is a crucial era in Japanese history that spans from 538 to 710 AD. Named after
+                        the Asuka region, where the imperial court was situated at the time, this period is marked by
+                        significant political, social, and cultural developments. The Asuka period is a subset of the
+                        larger Kofun period and is followed by the Nara period.
+                    </p>
+                </div>
+            </div>
+
+            <div class="info-timeline2" id="content5">
+                <div class="foto-timeline">
+                    <img src="./styles/images/home/periodo-nara.jpg" alt="Periodo Jomon">
+                </div>
+
+                <div class="texto-timeline">
+
+                    <div class="titulo-timeline">
+                        <h4>Nara Period (710 - 794).-</h4>
+                    </div>
+                    <p>The Nara period, also known as the Nara era, is a significant period in Japanese history that
+                        spans from 710 to 794 AD. It follows the Asuka period and precedes the Heian period. The Nara
+                        period is characterized by political consolidation, cultural achievements, and the establishment
+                        of a centralized imperial government.
+                    </p>
+                </div>
+            </div>
+
+            <div class="info-timeline2" id="content6">
+                <div class="foto-timeline">
+                    <img src="./styles/images/home/periodo-heigan.jpg" alt="Periodo Jomon">
+                </div>
+
+                <div class="texto-timeline">
+
+                    <div class="titulo-timeline">
+                        <h4>Heian Period (794 - 1186).-</h4>
+                    </div>
+                    <p>The Heian period, which lasted from 794 to 1185 AD, is a significant era in Japanese history. It
+                        follows the Nara period and precedes the Kamakura period. Named after the capital city
+                        Heian-kyo, which is present-day Kyoto, this period is known for its flourishing arts and
+                        culture, as well as significant political and social developments.
+                    </p>
+                </div>
+            </div>
+
+            <div class="info-timeline2" id="content7">
+                <div class="foto-timeline">
+                    <img src="./styles/images/home/periodo-kamakura.jpg" alt="Periodo Jomon">
+                </div>
+
+                <div class="texto-timeline">
+
+                    <div class="titulo-timeline">
+                        <h4>Kamakura Period (1186 - 1333).-</h4>
+                    </div>
+                    <p>The Kamakura period in Japanese history extends from 1185 to 1333 AD. It follows the Heian period
+                        and is named after the city of Kamakura, where Minamoto no Yoritomo established the Kamakura
+                        shogunate. This period is characterized by the rise of feudalism, the dominance of samurai
+                        warriors, and the establishment of a military government.
+                    </p>
+                </div>
+            </div>
+
+            <div class="info-timeline2" id="content8">
+                <div class="foto-timeline">
+                    <img src="./styles/images/home/periodo-muromachi.jpg" alt="Periodo Jomon">
+                </div>
+
+                <div class="texto-timeline">
+
+                    <div class="titulo-timeline">
+                        <h4>Muromachi Period (1333 - 1336).-</h4>
+                    </div>
+                    <p>
+                        The Muromachi period, also known as the Ashikaga period, is a significant era in Japanese
+                        history that spans from 1336 to 1573 AD. It follows the Kamakura period and precedes the
+                        Azuchi-Momoyama period. The period is named after the district of Kyoto where the Ashikaga
+                        shogunate had its headquarters.
+                    </p>
+                </div>
+            </div>
+
+            <div class="info-timeline2" id="content9">
+                <div class="foto-timeline">
+                    <img src="./styles/images/home/periodo-muromachi.jpg" alt="Periodo Jomon">
+                </div>
+
+                <div class="texto-timeline">
+
+                    <div class="titulo-timeline">
+                        <h4>Muromachi Period (1336 - 1673).-</h4>
+                    </div>
+                    <p>The Muromachi period, also known as the Ashikaga period, is a significant era in Japanese
+                        history that spans from 1336 to 1573 AD. It follows the Kamakura period and precedes the
+                        Azuchi-Momoyama period. The period is named after the district of Kyoto where the Ashikaga
+                        shogunate had its headquarters.
+                    </p>
+                </div>
+            </div>
+
+            <div class="info-timeline2" id="content10">
+                <div class="foto-timeline">
+                    <img src="./styles/images/home/periodo-azuchi.jpg" alt="Periodo Jomon">
+                </div>
+
+                <div class="texto-timeline">
+
+                    <div class="titulo-timeline">
+                        <h4>Azuchi-Momoyama Period (1673 - 1868).-</h4>
+                    </div>
+                    <p>This era follows the Muromachi period and precedes the Edo period. The Azuchi-Momoyama period is
+                        characterized by significant political unification, military campaigns, and cultural
+                        developments. The period is named after two iconic locations: Azuchi Castle, built by Oda
+                        Nobunaga, and Momoyama, the region around Toyotomi Hideyoshi's castle.
+                    </p>
+                </div>
+            </div>
+
+            <div class="info-timeline2" id="content11">
+                <div class="foto-timeline">
+                    <img src="./styles/images/home/periodo-showa.jpg" alt="Periodo Jomon">
+                </div>
+
+                <div class="texto-timeline">
+
+                    <div class="titulo-timeline">
+                        <h4>Showa Period (1926 - 1989).-</h4>
+                    </div>
+                    <p>The Shōwa period is a significant era in Japanese history that spans from December 25, 1926, to
+                        January 7, 1989. It encompasses the reign of Emperor Hirohito, the longest in Japanese history,
+                        and it is divided into two main phases: the pre-war period (1926-1945) and the post-war period
+                        (1945-1989).
+                    </p>
+                </div>
+            </div>
+
+            <div class="info-timeline2" id="content12">
+                <div class="foto-timeline">
+                    <img src="./styles/images/home/periodo-heisei.jpg" alt="Periodo Jomon">
+                </div>
+
+                <div class="texto-timeline">
+
+                    <div class="titulo-timeline">
+                        <h4>Heisei Period (1868 - 1989).-</h4>
+                    </div>
+                    <p>The Heisei era is a period in Japanese history that spanned from January 8, 1989, to April 30,
+                        2019. It corresponds to the reign of Emperor Akihito. The Heisei era is characterized by
+                        significant social, economic, and technological changes, as well as notable events that shaped
+                        contemporary Japan.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!------------------------------- SECTION 3 -------------------------------------->
+
+
+        <div class="section-3">
+            <div class="rectangulo-2-index">
+                <p>GALLERY</p>
+            </div>
+
+            <div class="galeria">
+                <div class="fotos-galeria" id="foto1">
+                    <img src="./styles/images/home/galeria-7.jpg" alt="">
+                    <div class="texto-hover">
+                        <h5>Osaka Castle</h5>
+                    </div>
+                </div>
+
+                <div class="fotos-galeria" id="foto2">
+                    <img src="./styles/images/home/galeria-2.jpg" alt="">
+                    <div class="texto-hover">
+                        <h5>Minato City, Tokyo, Japan</h5>
+                    </div>
+                </div>
+
+                <div class="fotos-galeria" id="foto3">
+                    <img src="./styles/images/home/galeria-3.jpg" alt="">
+                    <div class="texto-hover">
+                        <h5>Himeji Castle</h5>
+                    </div>
+                </div>
+
+                <div class="fotos-galeria" id="foto4">
+                    <img src="./styles/images/home/galeria-4.jpg" alt="">
+                    <div class="texto-hover">
+                        <h5>Himeji Castle</h5>
+                    </div>
+                </div>
+
+                <div class="fotos-galeria" id="foto5">
+                    <img src="./styles/images/home/galeria-5.jpg" alt="">
+                    <div class="texto-hover">
+                        <h5>Monte Fuji, Honshu</h5>
+                    </div>
+                </div>
+
+                <div class="fotos-galeria" id="foto6">
+                    <img src="./styles/images/home/galeria-6.jpg" alt="">
+                    <div class="texto-hover">
+                        <h5>Monte Fuji, Honshu</h5>
+                    </div>
+                </div>
+
+                <div class="fotos-galeria" id="foto7">
+                    <img src="./styles/images/home/galeria-1.jpg" alt="">
+                    <div class="texto-hover">
+                        <h5>Monte Fuji, Honshu</h5>
+                    </div>
+                </div>
+
+                <div class="fotos-galeria" id="foto8">
+                    <img src="./styles/images/home/galeria-8.jpg" alt="">
+                    <div class="texto-hover">
+                        <h5>Monte Fuji, Honshu</h5>
+                    </div>
+                </div>
+
+                <div class="fotos-galeria" id="foto9">
+                    <img src="./styles/images/home/galeria-9.jpg" alt="">
+                    <div class="texto-hover">
+                        <h5>Monte Fuji, Honshu</h5>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!------------------------------- FOOTER -------------------------------------->
+
+        <footer>
+            <div class="contenedor-footer-top">
+                <div class="logo-footer">
+                    <div class="circle">
+                    </div>
+                    <p>JAPAN TOURISM</p>
+                </div>
+
+                <div class="pages">
+                    <h3>PAGES</h3>
+                    <a href="index.html" class="links">
+                        <p>Home</p>
+                    </a>
+                    <a href="routes.html" class="links">
+                        <p>Routes</p>
+                    </a>
+                    <a href="howtocome.html" class="links">
+                        <p>How to come</p>
+                    </a>
+                    <a href="contact.html" class="links">
+                        <p>Contact</p>
+                    </a>
+                </div>
+
+                <div class="policies">
+                    <h3>POLICIES</h3>
+                    <a href="#" class="links">
+                        <p>Privacy Policy</p>
+                    </a>
+                    <a href="#" class="links">
+                        <p>Cookies Policy</p>
+                    </a>
+                    <a href="#" class="links">
+                        <p>Terms and conditions</p>
+                    </a>
+                    <a href="#" class="links">
+                        <p>Terms of use</p>
+                    </a>
+                </div>
+
+                <div class="social-media">
+                    <h3>SOCIAL MEDIA</h3>
+                    <a href="#" class="links">
+                        <p><img src="./styles/images/home/insta.png" alt="" class="imagen-social-media">Instagram</p>
+                    </a>
+                    <a href="#" class="links">
+                        <p><img src="./styles/images/home/x.png" alt="" class="imagen-social-media">Twitter</p>
+                    </a>
+                    <a href="#" class="links">
+                        <p><img src="./styles/images/home/yt.png" alt="" class="imagen-social-media">Youtube</p>
+                    </a>
+                    <a href="#" class="links">
+                        <p><img src="./styles/images/home/facebook.png" alt="" class="imagen-social-media">Facebook</p>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="contenedor-footer-bottom">
+                <p>Copyrights Japan 2023 ( All rigths reserved )</p>
+            </div>
+        </footer>
+    </div>
+    <script src="./styles/js/nav.js"></script>
+    <script src="./styles/js/index.js"></script>
+</body>
+
+</html>

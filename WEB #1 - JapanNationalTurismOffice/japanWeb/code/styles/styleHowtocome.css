@@ -1,0 +1,705 @@
+html,
+body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #000000;
+    --secondary-color: white;
+    --terciary-color: #999999;
+}
+
+body {
+    /* reset de los user agent styles para margin y padding*/
+    margin: 0;
+    padding: 0;
+
+    font-family: Montserrat, "sans-serif";
+}
+
+.container {
+    overflow-x: hidden;
+    min-height: 100vh;
+    background-color: white;
+}
+
+/* ------------------------------ CABECERA ------------------------------------ */
+
+
+
+header {
+    display: flex;
+    width: 100%;
+    /* background-color: coral; */
+
+    z-index: 1999;
+    position: absolute;
+
+    justify-content: space-between;
+    overflow-x: hidden;
+
+}
+
+
+/* ------------------ LOGO ------------------ */
+
+
+.logo {
+    display: flex;
+    flex-flow: row nowrap;
+
+    width: 30vw;
+    /* background-color: #F0B460; */
+
+    justify-content: left;
+    align-items: center;
+    align-content: center;
+
+
+}
+
+
+/* ------------------ CIRCLE ------------------ */
+
+
+.circle {
+    width: 5em;
+    height: 5em;
+    background-color: red;
+    /* Puedes cambiar el color */
+    border-radius: 50%;
+    /* Establece el radio para hacerlo circular */
+
+    margin-top: 3vh;
+    margin-left: 2.4vw;
+}
+
+.logo p {
+    margin-top: 6vh;
+    margin-left: 1vw;
+    font-size: clamp(0.8rem, 0.5rem + 1vw, 1.7rem);
+}
+
+
+
+/* -------------MENU------------- */
+
+
+
+.main-nav {
+    display: flex;
+    flex-flow: row nowrap;
+
+    font-weight: 300;
+
+    margin-top: 5vh;
+
+    /* background-color: coral; */
+}
+
+.list-nav {
+    display: flex;
+}
+
+.list-nav li:not(:last-child) {
+    margin-right: 8vw;
+}
+
+.list-nav li {
+    text-transform: uppercase;
+    font-size: clamp(0.7rem, 0.579rem + 0.404vw, 1.064rem);
+    font-weight: 400;
+    list-style: none;
+    font-family: Montserrat, "sans serif";
+    margin-right: 4vw;
+}
+
+.list-nav-item1 a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+
+
+.link {
+    text-decoration: none;
+    color: inherit;
+    color: var(--main-color);
+}
+
+.main-nav li a:hover {
+    color: white;
+}
+
+
+/* ------------------------------ HERO ------------------------------------ */
+
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 73.92523364485982vh;
+
+    background-image: url(./images/howtocome/avion-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    overflow: hidden;
+}
+
+
+.texto-hero {
+    position: absolute;
+    width: 100%;
+    top: 43%;
+    left: 87%;
+
+    transform: translate(-50%, -50%);
+    z-index: 3;
+
+
+    color: white;
+    font-size: clamp(1.9rem, 0.4rem + 4vw, 4rem);
+    font-weight: 200;
+
+    z-index: 999;
+}
+
+
+/* ----------------------------------- SECTION 1 --------------------------------- */
+
+
+
+.section-1 {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: fit-content;
+}
+
+.rectangulo-1-howtocome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 13vh;
+    background-color: #1a1c1b;
+}
+
+.rectangulo-1-howtocome p {
+    color: white;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.rectangulo-1-air {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 9vh;
+    background-color: var(--terciary-color);
+}
+
+.rectangulo-1-air {
+    color: white;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.by-air {
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+
+    height: fit-content;
+
+    /* background-color: #999999; */
+}
+
+.foto-air {
+    width: 40em;
+    height: fit-content;
+    /* background-color: red; */
+
+    margin-top: 10vh;
+    margin-right: 7vw;
+}
+
+.foto-air img {
+    width: 40em;
+}
+
+.texto-air {
+    width: 40em;
+    height: 45vh;
+    /* height: fit-content; */
+    /* background-color: yellow; */
+}
+
+.texto-air h4 {
+    border-top: 1px solid red;
+    width: 3em;
+
+    font-size: clamp(1.7rem, 1.433rem + 0.889vw, 2.5rem);
+    font-weight: 300;
+}
+
+.texto-air p {
+    font-size: clamp(0.9rem, 0.85rem + 0.167vw, 1.05rem);
+    font-weight: 300;
+    line-height: 2.5em;
+    width: 90%;
+}
+
+
+/* ----------------------------------- SECTION 2 --------------------------------- */
+
+
+.section-2 {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: fit-content;
+
+    margin-top: 10vh;
+}
+
+.rectangulo-1-sea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 9vh;
+    background-color: var(--terciary-color);
+}
+
+.rectangulo-1-sea {
+    color: white;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.by-sea {
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+
+    height: fit-content;
+
+    /* background-color: #999999; */
+}
+
+.foto-sea {
+    width: 40em;
+    height: fit-content;
+    /* background-color: red; */
+
+    margin-top: 10vh;
+    margin-right: 7vw;
+}
+
+.foto-sea img {
+    width: 40em;
+}
+
+.texto-sea {
+    width: 40em;
+    height: 45vh;
+    /* height: fit-content; */
+    /* background-color: yellow; */
+}
+
+.texto-sea h4 {
+    border-top: 1px solid red;
+    width: 3.2em;
+
+    font-size: clamp(1.7rem, 1.433rem + 0.889vw, 2.5rem);
+    font-weight: 300;
+}
+
+.texto-sea p {
+    font-size: clamp(0.9rem, 0.85rem + 0.167vw, 1.05rem);
+    font-weight: 300;
+    line-height: 2.5em;
+    width: 90%;
+}
+
+
+/* ----------------------------------- SECTION 3 --------------------------------- */
+
+
+.section-3 {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: fit-content;
+
+    margin-top: 10vh;
+}
+
+.rectangulo-1-earth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 9vh;
+    background-color: var(--terciary-color);
+}
+
+.rectangulo-1-earth {
+    color: white;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.by-earth {
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+
+    height: fit-content;
+
+    /* background-color: #999999; */
+}
+
+.foto-earth {
+    width: 40em;
+    height: fit-content;
+    /* background-color: red; */
+
+    margin-top: 10vh;
+    margin-right: 7vw;
+}
+
+.foto-earth img {
+    width: 40em;
+}
+
+.texto-earth {
+    width: 40em;
+    height: 45vh;
+    /* background-color: yellow; */
+}
+
+.texto-earth h4 {
+    border-top: 1px solid red;
+    width: 4.26em;
+
+    font-size: clamp(1.7rem, 1.433rem + 0.889vw, 2.5rem);
+    font-weight: 300;
+}
+
+.texto-earth p {
+    font-size: clamp(0.9rem, 0.85rem + 0.167vw, 1.05rem);
+    font-weight: 300;
+    line-height: 2.5em;
+    width: 90%;
+}
+
+
+
+
+/* ------------------------------ FOOTER ------------------------------------ */
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+    height: fit-content;
+    color: white;
+    background-color: #1a1c1b;
+
+    margin-top: 10vh;
+}
+
+.contenedor-footer-top {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+
+    width: 100vw;
+    height: fit-content;
+    /* background-color: #F0B460; */
+
+    margin-top: 6vh;
+}
+
+.logo-footer {
+    display: flex;
+    flex-flow: row nowrap;
+
+    width: 20%;
+    /* background-color: green; */
+
+    justify-content: right;
+    align-items: center;
+    align-content: center;
+
+
+}
+
+.logo-footer p {
+    margin-left: 1vw;
+    font-size: 1.7rem;
+}
+
+.pages h3 {
+    font-size: 1rem;
+    margin-bottom: 3vh;
+}
+
+.pages p {
+    font-size: .8rem;
+    margin-bottom: 2.2vh;
+}
+
+.policies h3 {
+    font-size: 1rem;
+    margin-bottom: 3vh;
+}
+
+.policies p {
+    font-size: .8rem;
+    margin-bottom: 2.2vh;
+}
+
+.social-media {
+    margin-right: 4em;
+}
+
+.social-media h3 {
+    font-size: 1rem;
+    margin-bottom: 3vh;
+}
+
+.social-media p {
+    font-size: .8rem;
+    margin-bottom: 2.2vh;
+}
+
+.imagen-social-media {
+    width: 1.4vw;
+    margin-right: .5vw;
+    background-color: aliceblue;
+}
+
+.links {
+    text-decoration: none;
+    color: white;
+}
+
+.contenedor-footer-bottom {
+    width: 70vw;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    border-top: 1px solid var(--terciary-color);
+    margin-top: 2vh;
+}
+
+.contenedor-footer-bottom p {
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+    font-size: .8rem;
+}
+
+.abrir-menu, .cerrar-menu {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 2rem;
+        cursor: pointer;
+        background-color: transparent;
+        color: white;
+        margin-right: 2em;
+
+    }
+
+    .main-nav {
+        opacity: 0;
+        visibility: hidden;
+
+    }
+
+    header {
+        overflow: unset;
+    }
+    .main-nav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0em;
+        right: 0em;
+        margin: 0%;
+        bottom: 0;
+        gap: 1rem;
+        position: fixed;
+        background-color: var(--terciary-color);
+        /* padding: 2rem; */
+        width: 30%;
+        height: 100vh;
+        align-items: end;
+        justify-content: flex-start;
+        box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .5);
+        
+    }
+
+    .main-nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .list-nav {
+        display: flex;
+        flex-direction: column;
+        margin: 0%;
+    }
+
+    .list-nav li {
+        margin-top: 7vh;
+        font-size: 1rem;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+
+    .texto-hero {
+        top: 38%;
+        left: 77%;
+    }
+
+    .texto-air {
+        width: 27em;
+        height: 45vh;
+        margin-left: 7vw;
+        /* height: fit-content; */
+        /* background-color: yellow; */
+    }
+
+    .texto-sea {
+        width: 27em;
+        height: 45vh;
+        margin-left: 7vw;
+        /* height: fit-content; */
+        /* background-color: yellow; */
+    }
+
+    .texto-earth {
+        width: 27em;
+        height: 45vh;
+        margin-left: 7vw;
+        /* height: fit-content; */
+        /* background-color: yellow; */
+    }
+
+    /* ---------------------- FOOTER ------------------------- */
+
+    .contenedor-footer-top {
+        flex-wrap: wrap;
+    }
+
+    .logo-footer {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .pages {
+        width: 100%;
+        text-align: center;
+    }
+
+    .policies {
+        width: 100%;
+        text-align: center;
+    }
+
+    .social-media {
+        width: 100%;
+        text-align: center;
+        margin-right: 0em;
+    }
+
+    .pages h3 {
+        font-size: 1.3rem;
+    }
+
+    .policies h3 {
+        font-size: 1.3rem;
+    }
+
+    .social-media h3 {
+        font-size: 1.3rem;
+    }
+
+    .pages p {
+        font-size: 1rem;
+    }
+
+    .policies p {
+        font-size: 1rem;
+    }
+
+    .social-media p {
+        font-size: 1rem;
+    }
+
+    .social-media img {
+        width: 20px;
+    }
+
+    .contenedor-footer-bottom {
+        width: 80vw;
+    }
+}
