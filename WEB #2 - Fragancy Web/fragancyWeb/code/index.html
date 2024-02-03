@@ -4,20 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LUXEAURA</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="./styles/images/favicon.png" type="image/png">
 </head>
 
 <body>
 
-    <div class="container">
+    <div class="container" id ="container">
+
 
         <!------------------------------ CABECERA ------------------------------>
+
 
         <header role="banner">
 
             <div class="logo">
-                <a href="#"><img src="./styles/images/logo-2.png" alt="logo"></a>
+                <a href="#"><img src="./styles/images/logo-def.png" alt="logo"></a>
             </div>
 
             <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
@@ -26,7 +29,7 @@
 
                 <button class="cerrar-menu" id="cerrar"><i class="bi bi-x-lg"></i></button>
                 <ul class="list-nav">
-                    <li class="list-nav-item"><a href="#home" class="link">HOME</a></li>
+                    <li class="list-nav-item"><a href="#home" class="link active">HOME</a></li>
                     <li class="list-nav-item"><a href="#about" class="link">ABOUT</a></li>
                     <li class="list-nav-item"><a href="#services" class="link">SHOP</a></li>
                     <li class="list-nav-item"><a href="#contact" class="link">CONTACT</a></li>
@@ -56,8 +59,51 @@
             <div class="imagen-hero">
 
             </div>
-            
+
+            <div class="scroll-down">
+
+            </div>
+
         </div>
+
+
+        <!------------------------------ SECTION 1 ------------------------------>
+
+
+        <div class="section-1">
+            
+            <div class="texto-1-section-1">
+                <p>IMMERSE</p>
+            </div>
+
+            <div class="texto-2-section-1">
+                <p>YOURSELF</p>
+            </div>
+
+            <div class="video-section-1">
+                <video id = "video-hero" muted autoplay>
+                    <source src="./styles/videos/5.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+
+
+        <!------------------------------ SECTION 2 ------------------------------>
+
+
+        <div class="section-2">
+            <img src="./styles/images/posibles/atractiva-mujer-sensual-seductora-estilo-vestido-boho-sentado-cafe-retro-vintage-perfume.jpg" width = "1000px" alt="">
+        </div>
+
+
+        <!------------------------------ SECTION 3 ------------------------------>
+
+
+        <div class="section-3">
+            <img src="./styles/images/posibles/atractiva-mujer-sensual-seductora-estilo-vestido-boho-sentado-cafe-retro-vintage-perfume.jpg" width = "1000px" alt="">
+        </div>
+
 
     </div>
 
@@ -66,7 +112,8 @@
     <script src='https://cdn.jsdelivr.net/npm/jquery.ripples@0.6.3/dist/jquery.ripples.min.js'></script>
 
     <script src="./js/hero.js"></script>
-
+    <script src="./js/video.js"></script>
+    <script src="./js/stickynav.js"></script>
 </body>
 
 </html>

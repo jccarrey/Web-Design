@@ -1,9 +1,143 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,700;1,800&display=swap');
 
 html,
 body {
     height: 100%;
     scroll-behavior: smooth;
+
 }
 
 * {
@@ -11,9 +145,8 @@ body {
 }
 
 :root {
-    --main-color: #000000;
-    --secondary-color: white;
-    --terciary-color: #999999;
+    --main-color: white;
+    --secondary-color: #a0a0a0;
 }
 
 body {
@@ -21,12 +154,17 @@ body {
     margin: 0;
     padding: 0;
     font-family: Montserrat, "sans-serif";
+    /* overflow-y: hidden; */
 }
 
 .container {
-    overflow-x: hidden;
+    overflow: hidden;
     min-height: 100vh;
-    background-color: white;
+
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 
@@ -35,25 +173,40 @@ body {
 
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     width: 100%;
-    /* background-color: coral; */
-    z-index: 1999;
-    position: absolute;
+
+    z-index: 100000;
     justify-content: space-between;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    transition: 0.6s;
 }
 
+header.sticky {
+    background-color: #000000;
+}
 
-/* ------------------ LOGO ------------------ */
+/* header.sticky .logo,
+header.sticky ul li a,
+header.sticky ul li a.active {
+    color: #000;
+}
+
+header.sticky ul li a.active::after {
+    background-color: #000;
+} */
+
+/* ------------------------------------ LOGO ------------------------------------ */
 
 
 .logo {
+    position: relative;
     display: flex;
     flex-flow: row nowrap;
 
-    width: 30vw;
+    width: 10vw;
     /* background-color: #F0B460; */
 
     justify-content: flex-start;
@@ -61,10 +214,11 @@ header {
     align-content: center;
 
     cursor: pointer;
-    text-decoration: none;
 
-    margin-left: 5vw;
-    margin-top: 3vh;
+    margin-left: 3vw;
+    margin-top: 0.5vh;
+
+    transition: 0.6s;
 }
 
 .logo img {
@@ -73,7 +227,7 @@ header {
 }
 
 
-/* -------------MENU------------- */
+/* ------------------------------------ MENÚ ------------------------------------ */
 
 
 .main-nav {
@@ -85,6 +239,7 @@ header {
 }
 
 .list-nav {
+    position: relative;
     display: flex;
     margin-right: 2vw;
 }
@@ -94,30 +249,50 @@ header {
 }
 
 .list-nav li {
+    position: relative;
     text-transform: uppercase;
-    font-size: clamp(0.7rem, 0.579rem + 0.404vw, 1.064rem);
+    font-size: clamp(0.7rem, 0.557rem + 0.381vw, 0.9rem);
     font-weight: 500;
     list-style: none;
     font-family: Montserrat, "sans serif";
     margin-right: 4vw;
 }
 
-.list-nav-item1 a {
-    position: relative;
-    text-decoration: none;
-    color: white;
+.list-nav li a::after {
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
 }
 
+.list-nav li a:hover {
+    color: var(--main-color);
+}
+
+.list-nav li a:hover::after {
+    width: 100%;
+}
 
 .link {
+    position: relative;
     text-decoration: none;
-    color: inherit;
-    color: white;
+    color: var(--secondary-color);
+    letter-spacing: 0.5px;
+    padding: 0 6px;
 }
 
-.main-nav li a:hover {
-    color: white;
+.list-nav li a.active {
+    color: var(--main-color);
 }
+
+.list-nav li a.active::after {
+    width: 100%;
+}
+
 
 .abrir-menu,
 .cerrar-menu {
@@ -128,61 +303,61 @@ header {
 
 /* ------------------------------------ HERO ------------------------------------ */
 
+
+
 #hero {
     position: relative;
     width: 100%;
     height: 100vh;
-
-    background-image: url(./images/fondo-negro.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
 }
+
+
+/*----------------- TEXTO 1 -----------------*/
+
 
 .texto-hero-1 {
     position: absolute;
-    width: 100%;
+    width: 17%;
     top: 40%;
-    /* Puedes ajustar esto según sea necesario */
-    left: 56%;
-    /* Puedes ajustar esto según sea necesario */
+    left: 16%;
     transform: translate(-50%, -50%);
-    /* Frases estarán por encima de las imágenes de fondo */
 
-    color: white;
+    color: var(--main-color);
     font-size: clamp(1.2rem, 0.271rem + 2.476vw, 2.5rem);
-    font-weight: 200;
+    font-weight: 300;
 }
+
+
+/*----------------- TEXTO 2 -----------------*/
+
 
 .texto-hero-2 {
     position: absolute;
-    width: 100%;
+    width: 20%;
     top: 50%;
-    /* Puedes ajustar esto según sea necesario */
-    left: 61%;
-    /* Puedes ajustar esto según sea necesario */
+    left: 21%;
     transform: translate(-50%, -50%);
-    /* Frases estarán por encima de las imágenes de fondo */
 
-    color: white;
+    color: var(--main-color);
     font-size: clamp(1.2rem, 0.271rem + 2.476vw, 2.5rem);
-    font-weight: 200;
+    font-weight: 300;
 }
+
+
+/*----------------- TEXTO 3 -----------------*/
+
 
 .texto-hero-3 {
     position: absolute;
-    width: 100%;
+    width: 22%;
     top: 60%;
-    /* Puedes ajustar esto según sea necesario */
-    left: 71%;
-    /* Puedes ajustar esto según sea necesario */
+    left: 31%;
     transform: translate(-50%, -50%);
-    /* Frases estarán por encima de las imágenes de fondo */
 
-    color: white;
+    color: var(--main-color);
     font-size: clamp(1.2rem, 0.271rem + 2.476vw, 2.5rem);
-    font-weight: 200;
+    font-weight: 300;
+
 }
 
 .texto-hero p {
@@ -190,16 +365,142 @@ header {
 }
 
 .imagen-hero {
-position: absolute;
-    width: 30%;
-    height:55vh;
+    position: absolute;
+    width: 45vw;
+    height: 70vh;
 
-    right: 15vw;
-    top: 23vh;
+    right: 3vw;
+    top: 15vh;
 
-    background-image: url(./images/imagen-hero.png);
+    background-image: url(./images/foto-hero.png);
     background-repeat: no-repeat;
     background-position: right center;
-    background-size: contain;
-    /* background-color: #999999; */
+    background-size: cover;
+    /* background-color: aqua; */
+}
+
+
+.section-1 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.texto-1-section-1 {
+    position: absolute;
+    width: 10.5%;
+    top: 12%;
+    left: 18.3%;
+    transform: translate(-50%, -50%);
+
+    color: var(--main-color);
+    font-size: clamp(2rem, -2.286rem + 11.429vw, 8rem);
+    font-weight: 600;
+    opacity: 0.4;
+    /* background-color: aliceblue; */
+}
+
+.texto-2-section-1 {
+    position: absolute;
+    width: 10.5%;
+    top: 87%;
+    left: 58.5%;
+    transform: translate(-50%, -50%);
+
+    color: var(--main-color);
+    font-size: clamp(2rem, -2.286rem + 11.429vw, 8rem);
+    font-weight: 600;
+    opacity: 0.4;
+}
+
+
+
+
+
+
+/* ------------------------------------ SECTION-2 ------------------------------------ */
+
+
+.section-2 {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* ------------------------------------ SECTION-3 ------------------------------------ */
+
+
+.section-3 {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.scroll-down {
+    height: 50px;
+    width: 30px;
+    border: 2px solid var(--main-color);
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.scroll-down::before,
+.scroll-down::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    border: 2px solid var(--main-color);
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+}
+
+.scroll-down::after {
+    top: 30%;
+}
+
+@keyframes scroll-down {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        top: 90%;
+    }
 }
