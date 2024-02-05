@@ -1,0 +1,971 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,700;1,800&display=swap');
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html,
+body {
+    height: 100%;
+    scroll-behavior: smooth;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: white;
+    --secondary-color: #a0a0a0;
+}
+
+body {
+    /* reset de los user agent styles para margin y padding*/
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, "sans-serif";
+}
+
+.container {
+    overflow: hidden;
+    min-height: 100vh;
+
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+/* ------------------------------ CABECERA ------------------------------------ */
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+
+    z-index: 100000;
+    justify-content: space-between;
+    transition: 0.6s;
+}
+
+header.sticky {
+    background-color: #000000;
+    border-bottom: 1px solid white;
+}
+
+
+/* ------------------------------------ LOGO ------------------------------------ */
+
+
+.logo {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+
+    width: 10vw;
+    /* background-color: #F0B460; */
+
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+
+    cursor: pointer;
+
+    margin-left: 3vw;
+    margin-top: 0.2vh;
+    margin-bottom: 1vh;
+    transition: 0.6s;
+}
+
+.logo img {
+    margin-top: 1vh;
+    width: 12em;
+}
+
+
+/* ------------------------------------ MENÚ ------------------------------------ */
+
+
+.main-nav {
+    display: flex;
+    flex-flow: row nowrap;
+
+    font-weight: 300;
+    margin-top: 5vh;
+}
+
+.list-nav {
+    position: relative;
+    display: flex;
+    margin-right: 2vw;
+}
+
+.list-nav li:not(:last-child) {
+    margin-right: 8vw;
+}
+
+.list-nav li {
+    position: relative;
+    text-transform: uppercase;
+    font-size: clamp(0.7rem, 0.557rem + 0.381vw, 0.9rem);
+    font-weight: 500;
+    list-style: none;
+    font-family: Montserrat, "sans serif";
+    margin-right: 4vw;
+}
+
+.list-nav li a::after {
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.list-nav li a:hover {
+    color: var(--main-color);
+}
+
+.list-nav li a:hover::after {
+    width: 100%;
+}
+
+.link {
+    position: relative;
+    text-decoration: none;
+    color: var(--secondary-color);
+    letter-spacing: 0.5px;
+    padding: 0 6px;
+}
+
+.list-nav li a.active {
+    color: var(--main-color);
+}
+
+.list-nav li a.active::after {
+    width: 100%;
+}
+
+
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+
+
+
+/* ------------------------------------ HERO ------------------------------------ */
+
+
+
+#hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+
+/*----------------- TEXTO 1 -----------------*/
+
+
+.texto-hero-1 {
+    position: absolute;
+    width: 17%;
+    top: 40%;
+    left: 16%;
+    transform: translate(-50%, -50%);
+
+    color: var(--main-color);
+    font-size: clamp(1.2rem, 0.271rem + 2.476vw, 2.5rem);
+    font-weight: 300;
+}
+
+
+/*----------------- TEXTO 2 -----------------*/
+
+
+.texto-hero-2 {
+    position: absolute;
+    width: 20%;
+    top: 50%;
+    left: 21%;
+    transform: translate(-50%, -50%);
+
+    color: var(--main-color);
+    font-size: clamp(1.2rem, 0.271rem + 2.476vw, 2.5rem);
+    font-weight: 300;
+}
+
+
+/*----------------- TEXTO 3 -----------------*/
+
+
+.texto-hero-3 {
+    position: absolute;
+    width: 22%;
+    top: 60%;
+    left: 31%;
+    transform: translate(-50%, -50%);
+
+    color: var(--main-color);
+    font-size: clamp(1.2rem, 0.271rem + 2.476vw, 2.5rem);
+    font-weight: 300;
+
+}
+
+.texto-hero p {
+    margin: 0;
+}
+
+.imagen-hero {
+    position: absolute;
+    width: 45vw;
+    height: 70vh;
+
+    right: 3vw;
+    top: 15vh;
+
+    background-image: url(./images/foto-hero.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+    /* background-color: aqua; */
+}
+
+
+
+/* ------------------------------------ SECTION-1 ------------------------------------ */
+
+
+
+.section-1 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+/*----------------- TEXTO IMMERSE -----------------*/
+
+
+
+.texto-1-section-1 {
+    position: absolute;
+    width: 10.5%;
+    top: 12%;
+    left: 18.3%;
+    transform: translate(-50%, -50%);
+
+    color: var(--main-color);
+    font-size: clamp(5rem, 2.857rem + 5.714vw, 8rem);
+    font-weight: 600;
+    opacity: 0.4;
+    /* background-color: aliceblue; */
+}
+
+
+
+/*----------------- TEXTO YOURSELF -----------------*/
+
+
+
+.texto-2-section-1 {
+    position: absolute;
+    width: 10.5%;
+    top: 87%;
+    left: 58.5%;
+    transform: translate(-50%, -50%);
+
+    color: var(--main-color);
+    font-size: clamp(5rem, 2.857rem + 5.714vw, 8rem);
+    font-weight: 600;
+    opacity: 0.4;
+}
+
+
+
+
+
+/* ------------------------------------ SECTION-2 ------------------------------------ */
+
+
+.section-2 {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: 100vh;
+
+}
+
+
+.section-2-first {
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: fit-content;
+}
+
+.foto-1-section-2 img {
+    width: 25em;
+}
+
+.texto-1-section-2 {
+    display: flex;
+    flex-flow: row wrap;
+
+    width: 30%;
+    height: fit-content;
+
+
+    margin-bottom: 8vh;
+    margin-right: 5vw;
+}
+
+.texto-1-section-2 p {
+    font-size: clamp(3rem, 1.571rem + 3.81vw, 5rem);
+    font-weight: 300;
+    line-height: 2.5em;
+    width: 100%;
+
+    color: var(--main-color);
+
+    /* background-color: rgb(141, 115, 115); */
+}
+
+
+/* ------------------------------------ SECTION-3 ------------------------------------ */
+
+
+.section-3 {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+.section-3-end {
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: fit-content;
+}
+
+
+.foto-2-section-3 img {
+    width: 25em;
+}
+
+.texto-2-section-3 {
+    display: flex;
+    flex-flow: row wrap;
+
+    width: 35%;
+    height: fit-content;
+    /* background-color: aquamarine; */
+
+    margin-bottom: 8vh;
+    margin-left: 0vw;
+    margin-right: 5vw;
+    /* background-color: aqua; */
+}
+
+
+.texto-2-section-3 p {
+    font-size: clamp(3rem, 1.571rem + 3.81vw, 5rem);
+    font-weight: 300;
+    line-height: 2.5em;
+    width: 100%;
+
+    color: var(--main-color);
+    /* background-color: rgb(141, 115, 115); */
+}
+
+
+
+/* ------------------------------------ SECTION-3 ------------------------------------ */
+
+
+.section-3 {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: fit-content;
+}
+
+.galeria {
+    position: relative;
+
+    width: 100vw;
+    height: 200vh;
+
+    /* background-color: antiquewhite; */
+}
+
+.fotos-galeria {
+    position: absolute;
+    width: 23%;
+}
+
+#galeria-foto-1{
+    top: 10%;
+    left: 10%;
+}
+
+#galeria-foto-2{
+    top: 10%;
+    right:10%; 
+}
+
+#galeria-foto-3{
+    top: 35%;
+    left: 38.5%;
+}
+
+#galeria-foto-4{
+    top: 60%;
+    left: 10%;
+}
+
+#galeria-foto-5{
+    top: 60%;
+    right: 8%;
+
+    width: 31em;
+}
+
+
+
+/* ------------------------------ FOOTER ------------------------------------ */
+
+footer {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+    height: fit-content;
+    color: white;
+    background-color: black;
+
+    border-top: 1px solid white;
+}
+
+.contenedor-footer-top {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+
+    width: 100vw;
+    height: fit-content;
+    /* background-color: #F0B460; */
+
+    margin-top: 6vh;
+}
+
+.logo-footer {
+    display: flex;
+    flex-flow: row nowrap;
+
+    width: 18%;
+    /* background-color: green; */
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.logo-footer img {
+    width: 70%;
+}
+
+.pages h3 {
+    font-size: 1rem;
+    margin-bottom: 3vh;
+}
+
+.pages p {
+    font-size: .8rem;
+    margin-bottom: 2.2vh;
+}
+
+.policies h3 {
+    font-size: 1rem;
+    margin-bottom: 3vh;
+}
+
+.policies p {
+    font-size: .8rem;
+    margin-bottom: 2.2vh;
+}
+
+.social-media {
+    margin-right: 10vw;
+}
+
+.social-media h3 {
+    font-size: 1rem;
+    margin-bottom: 3vh;
+}
+
+.social-media p {
+    font-size: .8rem;
+    margin-bottom: 2.2vh;
+}
+
+.imagen-social-media {
+    width: 1.4vw;
+    margin-right: .5vw;
+    background-color: aliceblue;
+}
+
+.links {
+    text-decoration: none;
+    color: white;
+}
+
+.contenedor-footer-bottom {
+    width: 72vw;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    border-top: 1px solid white;
+    margin-top: 2vh;
+}
+
+.contenedor-footer-bottom p {
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+    font-size: .8rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.scroll-down {
+    height: 50px;
+    width: 30px;
+    border: 2px solid var(--main-color);
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.scroll-down a {
+    width: 100%;
+    height: 100%;
+    z-index: 1000000000000000000000;
+}
+.scroll-down::before,
+.scroll-down::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    border: 2px solid var(--main-color);
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+}
+
+.scroll-down::after {
+    top: 30%;
+}
+
+@keyframes scroll-down {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        top: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------ MEDIAQUERIES ------------------------------------ */
+
+
+/*----------------- HEADER -----------------*/
+
+
+@media only screen and (max-width: 768px) {
+
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 2rem;
+        cursor: pointer;
+        background-color: transparent;
+        color: white;
+        margin-right: 2em;
+
+    }
+
+    .cerrar-menu {
+        margin-top: 4vh;
+    }
+
+    .main-nav {
+        opacity: 0;
+        visibility: hidden;
+
+    }
+
+    header {
+        overflow: unset;
+    }
+
+    .main-nav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0em;
+        right: 0em;
+        margin: 0%;
+        bottom: 0;
+        gap: 1rem;
+        position: fixed;
+        background-color: rgb(243, 208, 208);
+        /* padding: 2rem; */
+        width: 30%;
+        height: 100vh;
+        align-items: end;
+        justify-content: flex-start;
+        box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .5);
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .main-nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .list-nav {
+        display: flex;
+        flex-direction: column;
+        margin: 0%;
+    }
+
+    .list-nav li {
+        margin-top: 7vh;
+        font-size: 1rem;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+
+    /* ---------------------- TEXTOS SECTION 1 - HOME ------------------------- */
+
+    .texto-1-section-1 {
+        left: 13%;
+        top: 9%;
+    }
+
+    .texto-2-section-1 {
+        left: 9.2%;
+        bottom: 11%;
+    }
+
+    /* ---------------------- FOOTER ------------------------- */
+
+    .contenedor-footer-top {
+        flex-wrap: wrap;
+    }
+
+    .logo-footer {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin-bottom: 5vh;
+    }
+
+    .pages {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 3vh;
+    }
+
+    .policies {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 3vh;
+    }
+
+    .social-media {
+        width: 100%;
+        text-align: center;
+        margin-right: 0em;
+        margin-bottom: 3vh;
+    }
+
+    .pages h3 {
+        font-size: 1.3rem;
+    }
+
+    .policies h3 {
+        font-size: 1.3rem;
+    }
+
+    .social-media h3 {
+        font-size: 1.3rem;
+    }
+
+    .pages p {
+        font-size: 1rem;
+    }
+
+    .policies p {
+        font-size: 1rem;
+    }
+
+    .social-media p {
+        font-size: 1rem;
+    }
+
+    .social-media img {
+        width: 20px;
+    }
+
+    .contenedor-footer-bottom {
+        width: 80vw;
+    }
+}
