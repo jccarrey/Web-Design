@@ -135,7 +135,7 @@ html,
 body {
     height: 100%;
     scroll-behavior: smooth;
-
+    scrollbar-width: none;
 }
 
 * {
@@ -152,6 +152,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Montserrat, "sans-serif";
+
 }
 
 .container {
@@ -211,7 +212,7 @@ header.sticky {
 
 .logo img {
     margin-top: 1vh;
-    width: 12em;
+    width: 10em;
 }
 
 
@@ -223,7 +224,7 @@ header.sticky {
     flex-flow: row nowrap;
 
     font-weight: 300;
-    margin-top: 5vh;
+    margin-top: 4.5vh;
 }
 
 .list-nav {
@@ -395,7 +396,7 @@ header.sticky {
 .texto-1-section-1 {
     position: absolute;
     width: 10.5%;
-    top: 12%;
+    top: 14%;
     left: 18.3%;
     transform: translate(-50%, -50%);
 
@@ -415,7 +416,7 @@ header.sticky {
 .texto-2-section-1 {
     position: absolute;
     width: 10.5%;
-    top: 87%;
+    top: 85%;
     left: 58.5%;
     transform: translate(-50%, -50%);
 
@@ -458,8 +459,12 @@ header.sticky {
     height: fit-content;
 }
 
+.foto-1-section-2 {
+    margin-right: 15vw;
+}
+
 .foto-1-section-2 img {
-    width: 25em;
+    width: 30em;
 }
 
 .texto-1-section-2 {
@@ -469,9 +474,8 @@ header.sticky {
     width: 30%;
     height: fit-content;
 
-
     margin-bottom: 8vh;
-    margin-right: 5vw;
+    margin-right: 0vw;
 }
 
 .texto-1-section-2 p {
@@ -515,9 +519,12 @@ header.sticky {
     height: fit-content;
 }
 
+.foto-2-section-3 {
+    margin-left: 5vw;
+}
 
 .foto-2-section-3 img {
-    width: 25em;
+    width: 30em;
 }
 
 .texto-2-section-3 {
@@ -550,7 +557,7 @@ header.sticky {
 /* ------------------------------------ SECTION-3 ------------------------------------ */
 
 
-.section-3 {
+.section-4 {
     display: flex;
     flex-wrap: wrap;
 
@@ -560,6 +567,8 @@ header.sticky {
 
     width: 100vw;
     height: fit-content;
+
+    margin-top: -5vh;
 }
 
 .galeria {
@@ -573,34 +582,34 @@ header.sticky {
 
 .fotos-galeria {
     position: absolute;
-    width: 23%;
+    width: 30em;
 }
 
-#galeria-foto-1{
+#galeria-foto-1 {
     top: 10%;
     left: 10%;
 }
 
-#galeria-foto-2{
+#galeria-foto-2 {
     top: 10%;
-    right:10%; 
+    right: 10.5%;
 }
 
-#galeria-foto-3{
+#galeria-foto-3 {
     top: 35%;
     left: 38.5%;
 }
 
-#galeria-foto-4{
+#galeria-foto-4 {
     top: 60%;
     left: 10%;
 }
 
-#galeria-foto-5{
+#galeria-foto-5 {
     top: 60%;
-    right: 8%;
+    right: 10.5%;
 
-    width: 31em;
+    /* width: 31em; */
 }
 
 
@@ -617,7 +626,7 @@ footer {
     width: 100vw;
     height: fit-content;
     color: white;
-    background-color: black;
+    /* background-color: black; */
 
     border-top: 1px solid white;
 }
@@ -757,6 +766,7 @@ footer {
     height: 100%;
     z-index: 1000000000000000000000;
 }
+
 .scroll-down::before,
 .scroll-down::after {
     content: '';
@@ -892,6 +902,10 @@ footer {
 
 @media only screen and (max-width: 480px) {
 
+    #hero {
+        margin-bottom: 10vh;
+    }
+
     /* ---------------------- TEXTOS SECTION 1 - HOME ------------------------- */
 
     .texto-1-section-1 {
@@ -900,8 +914,61 @@ footer {
     }
 
     .texto-2-section-1 {
-        left: 9.2%;
-        bottom: 11%;
+        left: 9.3%;
+        top: 90%;
+    }
+
+    .section-1 {
+        margin-bottom: 40vh;
+    }
+
+    /* ---------------------- SECTION 2 ------------------------- */
+
+    /* ----- FOTO 1 ----- */
+
+    .foto-1-section-2 {
+        margin-right: 0vw;
+    }
+
+    .texto-1-section-2 {
+        display: flex;
+        flex-flow: row wrap;
+
+        width: 80%;
+        height: fit-content;
+
+        margin-bottom: 8vh;
+        margin-left: 15vw;
+        margin-top: 5vh;
+    }
+
+    /* ---------------------- SECTION 3 ------------------------- */
+
+    .section-3 {
+        margin-top: 25vh;
+    }
+
+    .foto-2-section-3 {
+        margin-left: 0vw;
+    }
+
+    .texto-2-section-3 {
+        display: flex;
+        flex-flow: row wrap;
+
+        width: 80%;
+        height: fit-content;
+
+        margin-bottom: 8vh;
+        margin-left: 17vw;
+        margin-top: 5vh;
+    }
+
+    /* ---------------------- SECTION 3 ------------------------- */
+
+    .section-4 {
+        margin-top: 10vh;
+        margin-bottom: -50vh;
     }
 
     /* ---------------------- FOOTER ------------------------- */
@@ -967,5 +1034,68 @@ footer {
 
     .contenedor-footer-bottom {
         width: 80vw;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 1800px) {
+    .fotos-galeria {
+        width: 25em;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .fotos-galeria {
+        width: 22em;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .fotos-galeria {
+        width: 19em;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .fotos-galeria {
+        width: 16em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .fotos-galeria {
+        width: 13em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .fotos-galeria {
+        width: 13em;
+    }
+
+    #galeria-foto-1 {
+        left: 5%;
+    }
+
+    #galeria-foto-2 {
+        top: 10%;
+        left: 52%;
+    }
+
+    #galeria-foto-3 {
+        top: 30.5%;
+        left: 30%;
+    }
+
+    #galeria-foto-4 {
+        top: 50%;
+        left: 5%;
+    }
+
+    #galeria-foto-5 {
+        top: 50%;
+        left: 52%;
     }
 }
