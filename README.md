@@ -4,3 +4,6 @@
 
 > **Note**
 > This is a note
+
+> [!NOTE]
+> This is a note
